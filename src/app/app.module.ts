@@ -8,6 +8,8 @@ import { MdButtonModule, MdRadioModule, MdInputModule, MdMenuModule, MdCheckboxM
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { CreateWalletComponent } from './dashboard/wallets/create/create.wallet.component';
+import { SendFromWalletComponent } from './dashboard/wallets/send/send.from.wallet.component';
 import { HomeComponent } from './dashboard/home/home.component';
 import { ProfileComponent } from './dashboard/profile/profile.component';
 import 'hammerjs';
@@ -29,11 +31,14 @@ import { PriceTableComponent } from './dashboard/component/pricetable/pricetable
 import { PanelsComponent } from './dashboard/component/panels/panels.component';
 
 import { SettingsService } from './services/settings.service';
+import { WizardComponent } from './dashboard/component/wizard/wizard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
+    CreateWalletComponent,
+    SendFromWalletComponent,
     HomeComponent,
     ProfileComponent,
     NavbarComponent,
@@ -51,7 +56,8 @@ import { SettingsService } from './services/settings.service';
     FooterComponent,
     SettingsComponent,
     PriceTableComponent,
-    PanelsComponent
+    PanelsComponent,
+    WizardComponent
   ],
   imports: [
     BrowserModule,

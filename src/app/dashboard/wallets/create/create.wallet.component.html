@@ -1,0 +1,54 @@
+<div class="container">
+  <app-navbar title="Create New Wallet"></app-navbar>
+  <div class="row page-title">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="wizard-panel card">
+        <div class="wizard-header">
+          <h3 class="text-center">Create New Wallet</h3>
+        </div>
+        <div class="wizard-navigation">
+          <ul class="nav nav-pills">
+            <li class="text-uppercase text-center">About</li>
+            <li class="text-uppercase text-center">Account</li>
+            <li class="text-uppercase text-center">Address</li>
+          </ul>
+          <div class="move-tab text-center text-uppercase">About</div>
+        </div>
+        <div class="wizard-body">
+          <div class="wizard-tab">
+            <div class="row">
+              <div class="col-md-12">
+                <h3 class="text-center">Enter a password</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <md-input-container color="accent">
+                  <input mdInput type="text" placeholder="password">
+                </md-input-container>
+              </div>
+            </div>
+          </div>
+          <div class="wizard-tab">
+            <div class="row">
+              <div class="col-md-12">
+                <h3 class="text-center">Download your keystore file</h3>
+              </div>
+            </div>
+          </div>
+          <div class="wizard-tab">
+            <div class="row">
+              <div class="col-md-12">
+                <h3 class="text-center">Save your private key</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wizard-footer">
+          <button id="preBtn" class="btn btn-danger" (click)="preOnClick()">Previous</button>
+          <button id="nextBtn" class="btn btn-success" (click)="nextOnClick()">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

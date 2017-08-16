@@ -4,9 +4,9 @@ import { Injectable, EventEmitter } from '@angular/core';
 export class SettingsService {
   public sidebarImageIndex = 0;
   public sidebarImageIndexUpdate: EventEmitter<number> = new EventEmitter();
-  public sidebarFilter = '#fff';
+  public sidebarFilter = 'orange';
   public sidebarFilterUpdate: EventEmitter<string> = new EventEmitter();
-  public sidebarColor = '#D80B0B';
+  public sidebarColor = '#000';
   public sidebarColorUpdate: EventEmitter<string> = new EventEmitter();
 
   constructor() { }
