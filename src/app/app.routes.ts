@@ -20,24 +20,26 @@ import { LockComponent } from './page/lock/lock.component';
 import { RegisterComponent } from './page/register/register.component';
 
 const routes: Routes = [
-  {path: 'login', component: LoginComponent},
-  {path: '', pathMatch: 'full', redirectTo: 'login'},
-  {path: 'lock', component: LockComponent},
-  {path: 'register', component: RegisterComponent},
-  {path: 'dashboard', component: RootComponent, children: [
-    {path: '', component: HomeComponent},
-    { path: 'wallet/create', component: CreateWalletComponent },
-    { path: 'wallet/send', component: SendFromWalletComponent },
-    {path: 'profile', component: ProfileComponent},
-    {path: 'table', component: TableComponent},
-    {path: 'notification', component: NotificationComponent},
-    {path: 'alert', component: SweetAlertComponent},
-    {path: 'settings', component: SettingsComponent},
-    {path: 'components/price-table', component: PriceTableComponent},
-    {path: 'components/panels', component: PanelsComponent}
-    { path: 'components/wizard', component: WizardComponent }
+  { path: 'login', component: LoginComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'login' },
+  { path: 'lock', component: LockComponent },
+  { path: 'register', component: RegisterComponent },
+  {
+    path: 'dashboard', component: RootComponent, children: [
+      { path: '', component: HomeComponent },
+      { path: 'wallet/create', component: CreateWalletComponent },
+      { path: 'wallet/send', component: SendFromWalletComponent },
+      { path: 'profile', component: ProfileComponent },
+      { path: 'table', component: TableComponent },
+      { path: 'notification', component: NotificationComponent },
+      { path: 'alert', component: SweetAlertComponent },
+      { path: 'settings', component: SettingsComponent },
+      { path: 'components/price-table', component: PriceTableComponent },
+      { path: 'components/panels', component: PanelsComponent },
+      { path: 'components/wizard', component: WizardComponent }
 
-  ]}
+    ]
+  }
 ];
 
 export const routing = RouterModule.forRoot(routes);

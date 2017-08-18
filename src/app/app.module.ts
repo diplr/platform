@@ -13,6 +13,7 @@ import { SendFromWalletComponent } from './dashboard/wallets/send/send.from.wall
 import { HomeComponent } from './dashboard/home/home.component';
 import { ProfileComponent } from './dashboard/profile/profile.component';
 import 'hammerjs';
+import 'crypto';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FigurecardComponent } from './shared/figurecard/figurecard.component';
 import { ImagecardComponent } from './shared/imagecard/imagecard.component';
@@ -32,6 +33,7 @@ import { PanelsComponent } from './dashboard/component/panels/panels.component';
 
 import { SettingsService } from './services/settings.service';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
+import { WalletService } from './services/wallet.service';
 
 @NgModule({
   declarations: [
@@ -71,7 +73,7 @@ import { WizardComponent } from './dashboard/component/wizard/wizard.component';
     MdMenuModule,
     MdCheckboxModule
   ],
-  providers: [SettingsService],
+  providers: [SettingsService, WalletService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
