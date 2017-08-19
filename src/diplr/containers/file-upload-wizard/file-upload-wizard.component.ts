@@ -7,8 +7,8 @@ import {Component, OnInit} from '@angular/core';
 })
 export class FileUploadWizardComponent implements OnInit {
   activeStep = 1;
-  nrOfSteps = 3;
-  base64Hash;
+  fileData: {file: File, hash: string};
+  metadata;
 
   constructor() {
   }
@@ -16,8 +16,13 @@ export class FileUploadWizardComponent implements OnInit {
   ngOnInit() {
   }
 
-  fileHashCreated(base64Hash: string) {
-    this.base64Hash = base64Hash;
+  fileDataSend(fileData: {file: File, hash: string}) {
+    this.fileData = fileData;
+  }
+
+  step2Nexted(metadata: {firstName: string, lastName: string, company: string}) {
+    this.metadata = metadata;
+    this.nextClicked();
   }
 
   nextClicked() {
@@ -29,6 +34,6 @@ export class FileUploadWizardComponent implements OnInit {
   }
 
   uploadToBlockChain() {
-    alert('Hier moet ge mij helpen Q ;) I give you them hash ' + this.base64Hash);
+    alert('Hier moet ge mij helpen Q ;) I give you them hash ' + this.fileData.hash);
   }
 }

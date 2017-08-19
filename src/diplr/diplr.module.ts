@@ -15,6 +15,7 @@ import {CardComponent} from './components/card/card.component';
 import {FileUploadStep2Component} from './components/file-upload-step-2/file-upload-step-2.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {FileUploadStep3Component} from './components/file-upload-step-3/file-upload-step-3.component';
+import {MetadataFormComponent} from './components/metadata-form/metadata-form.component';
 
 const containers = [
   FileUploadWizardComponent
@@ -27,7 +28,8 @@ const components = [
   FileUploadStep1Component,
   FileUploadStep2Component,
   FileUploadStep3Component,
-  CardComponent
+  CardComponent,
+  MetadataFormComponent
 ];
 
 const materialDesignModules = [

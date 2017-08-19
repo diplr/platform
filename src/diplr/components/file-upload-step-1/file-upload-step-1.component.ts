@@ -7,7 +7,7 @@ import sha256 from 'js-sha256';
   styleUrls: ['./file-upload-step-1.component.css']
 })
 export class FileUploadStep1Component implements OnInit {
-  @Output() fileHashCreate = new EventEmitter<string>();
+  @Output() fileData = new EventEmitter<{file: File, hash: string}>();
   @Output() next = new EventEmitter();
 
   fileHashed = false;
@@ -41,7 +41,7 @@ export class FileUploadStep1Component implements OnInit {
         } else {
           this.uploadProgress = 100;
           console.log(hash.hex());
-          this.fileHashCreate.emit(this.hexToBase64(hash.hex()));
+          this.fileData.emit({hash: this.hexToBase64(hash.hex()), file});
           this.fileHashed = true;
         }
       };

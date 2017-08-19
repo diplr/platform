@@ -3,7 +3,15 @@
     Upload your file to the blockchain
   </div>
   <div class="card-body">
-    Summary:...
+    <div class="space">Summary:</div>
+    <div class="card-form">
+      <md-input-container color="primary">
+        <input type="text" mdInput placeholder="File name" [formControl]="fileNameFormControl">
+      </md-input-container>
+    </div>
+    <diplr-metadata-form
+      [metaDataFormGroup]="metaDataFormGroup">
+    </diplr-metadata-form>
   </div>
   <div class="card-footer">
     <div class="previous">
