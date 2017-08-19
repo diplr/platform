@@ -1,0 +1,15 @@
+<div class="box"
+     [class.isDragover]="isDraggedOn"
+     (dragover)="draggedOn($event)"
+     (dragenter)="draggedOn($event)"
+     (dragleave)="draggedOf($event)"
+     (dragend)="draggedOf($event)"
+     (drop)="dropped($event)">
+  <input type="file" name="fileUpload" id="fileUpload" class="inputFile"
+         (change)="fileSelectedbyInput($event)"/>
+  <label for="fileUpload">
+    <diplr-file-upload-icon></diplr-file-upload-icon>
+    <span *ngIf="!selectedFile">Choose a file or drag and drop one&hellip;</span>
+    <span *ngIf="selectedFile">File selected {{selectedFile.name}}</span>
+  </label>
+</div>

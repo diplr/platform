@@ -1,0 +1,60 @@
+
+.box {
+  background-color: #dfc8ca;
+  padding: 6.25rem 1.25rem;
+  text-align: center;
+
+  outline: 2px dashed #92b0b3;
+  outline-offset: -10px;
+
+  -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+  transition: outline-offset .15s ease-in-out, background-color .15s linear;
+
+&.isDragover {
+   outline-offset: -20px;
+   outline-color: #c8dadf;
+   background-color: #fff;
+ }
+}
+
+.inputFile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputFile + label {
+  max-width: 80%;
+  font-size: 1.25rem;
+  /* 20px */
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.625rem 1.25rem;
+  /* 10px 20px */
+  color: #f1e5e6;
+  background-color: #e91e63;
+}
+
+.inputFile:focus + label,
+.inputFile.has-focus + label,
+.inputFile + label:hover {
+  background-color: #722040;
+}
+
+.inputFile + label svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+  margin-top: -0.25em;
+  /* 4px */
+  margin-right: 0.25em;
+  /* 4px */
+}
