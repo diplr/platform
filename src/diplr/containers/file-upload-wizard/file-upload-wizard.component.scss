@@ -1,0 +1,124 @@
+.container {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.background {
+  background: url("../../../assets/img/lock_bg.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  margin-top: 70px;
+  top: -60px;
+  -webkit-animation-name: card;
+  -moz-animation-name: card;
+  -o-animation-name: card;
+  animation-name: card;
+  -webkit-animation-duration: 600ms;
+  -moz-animation-duration: 600ms;
+  -o-animation-duration: 600ms;
+  animation-duration: 600ms;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes card {
+  from {
+    top: -40px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes card {
+  from {
+    top: -40px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+.card h4 {
+  margin-top: -30px;
+  margin-bottom: 20px;
+}
+
+.card-body, .card-body .mat-input-container {
+  width: 100%;
+}
+
+.card-footer {
+  margin: 15px 0 5px 0;
+}
+
+.box {
+  background-color: #dfc8ca;
+  padding: 6.25rem 1.25rem;
+  text-align: center;
+
+  outline: 2px dashed #92b0b3;
+  outline-offset: -10px;
+
+  -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+  transition: outline-offset .15s ease-in-out, background-color .15s linear;
+
+  &.isDragover {
+    outline-offset: -20px;
+    outline-color: #c8dadf;
+    background-color: #fff;
+  }
+}
+
+.inputFile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputFile + label {
+  max-width: 80%;
+  font-size: 1.25rem;
+  /* 20px */
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.625rem 1.25rem;
+  /* 10px 20px */
+  color: #f1e5e6;
+  background-color: #e91e63;
+}
+
+.inputFile:focus + label,
+.inputFile.has-focus + label,
+.inputFile + label:hover {
+  background-color: #722040;
+}
+
+.inputFile + label svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
+  margin-top: -0.25em;
+  /* 4px */
+  margin-right: 0.25em;
+  /* 4px */
+}
