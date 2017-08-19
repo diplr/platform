@@ -1,0 +1,31 @@
+<form novalidate [formGroup]="metaDataFormGroup" (submit)="formSubmit(metaDataFormGroup)">
+  <div class="card-form">
+    <div class="form-row">
+      <md-input-container color="primary">
+        <input type="text" mdInput placeholder="First Name" disabled formControlName="firstName">
+        <md-error
+          *ngIf="metaDataFormGroup.get('firstName').hasError('required') && metaDataFormGroup.get('firstName').touched">
+          First name is required
+        </md-error>
+      </md-input-container>
+    </div>
+    <div class="form-row">
+      <md-input-container color="accent">
+        <input type="text" mdInput placeholder="Last Name" formControlName="lastName">
+        <md-error
+          *ngIf="metaDataFormGroup.get('lastName').hasError('required') && metaDataFormGroup.get('lastName').touched">
+          Last name is required
+        </md-error>
+      </md-input-container>
+    </div>
+    <div class="form-row">
+      <md-input-container color="accent">
+        <input type="text" mdInput placeholder="Company" formControlName="company"/>
+        <md-error
+          *ngIf="metaDataFormGroup.get('company').hasError('required') && metaDataFormGroup.get('company').touched">
+          Company is required
+        </md-error>
+      </md-input-container>
+    </div>
+  </div>
+</form>

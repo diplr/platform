@@ -1,0 +1,17 @@
+.card-form{
+  padding: 0 5px 0 5px;
+}
+
+.form-row{
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 13px;
+}
+
+.form-row i{
+  position: relative;
+  top: -5px;
+  margin-right: 15px;
+  color: #555;
+}

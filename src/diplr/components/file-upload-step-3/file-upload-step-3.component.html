@@ -5,9 +5,11 @@
   <div class="card-body">
     <div class="space">Summary:</div>
     <div class="card-form">
-      <md-input-container color="primary">
-        <input type="text" mdInput placeholder="File name" [formControl]="fileNameFormControl">
-      </md-input-container>
+      <div class="form-row">
+        <md-input-container color="primary">
+          <input type="text" mdInput placeholder="File name" [formControl]="fileNameFormControl">
+        </md-input-container>
+      </div>
     </div>
     <diplr-metadata-form
       [metaDataFormGroup]="metaDataFormGroup">

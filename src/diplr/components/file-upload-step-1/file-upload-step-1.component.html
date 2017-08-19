@@ -3,9 +3,8 @@
     Select a file to upload or drag and drop a file onto the frame:
   </div>
   <div class="card-body">
-    <diplr-file-upload
+    <diplr-file-up  load
       (fileSelected)="fileSelected($event)"></diplr-file-upload>
-
     <div *ngIf="uploading">
       <md-progress-bar
         class=""
