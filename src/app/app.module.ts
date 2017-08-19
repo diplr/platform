@@ -34,6 +34,11 @@ import { PanelsComponent } from './dashboard/component/panels/panels.component';
 import { SettingsService } from './services/settings.service';
 import { WizardComponent } from './dashboard/component/wizard/wizard.component';
 import { WalletService } from './services/wallet.service';
+import { FileUploadComponent } from '../diplr/components/src/app/file-upload/file-upload.component';
+import { FileUploadIconComponent } from '../diplr/components/src/app/file-upload-icon/file-upload-icon.component';
+import { FileUploadStep1Component } from './file-upload-step-1/file-upload-step-1.component';
+import { CardComponent } from './card/card.component';
+import { FileUploadStep2Component } from './file-upload-step-2/file-upload-step-2.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +64,12 @@ import { WalletService } from './services/wallet.service';
     SettingsComponent,
     PriceTableComponent,
     PanelsComponent,
-    WizardComponent
+    WizardComponent,
+    FileUploadComponent,
+    FileUploadIconComponent,
+    FileUploadStep1Component,
+    CardComponent,
+    FileUploadStep2Component
   ],
   imports: [
     BrowserModule,
