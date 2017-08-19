@@ -39,6 +39,7 @@ import { FileUploadIconComponent } from '../diplr/components/src/app/file-upload
 import { FileUploadStep1Component } from './file-upload-step-1/file-upload-step-1.component';
 import { CardComponent } from './card/card.component';
 import { FileUploadStep2Component } from './file-upload-step-2/file-upload-step-2.component';
+import { FileUploadStep3Component } from './file-upload-step-3/file-upload-step-3.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +70,8 @@ import { FileUploadStep2Component } from './file-upload-step-2/file-upload-step-
     FileUploadIconComponent,
     FileUploadStep1Component,
     CardComponent,
-    FileUploadStep2Component
+    FileUploadStep2Component,
+    FileUploadStep3Component
   ],
   imports: [
     BrowserModule,

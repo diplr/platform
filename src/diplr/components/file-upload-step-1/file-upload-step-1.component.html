@@ -1,0 +1,27 @@
+<diplr-card>
+  <div class="card-header">
+    Select a file to upload or drag and drop a file onto the frame:
+  </div>
+  <div class="card-body">
+    <diplr-file-upload
+      (fileSelected)="fileSelected($event)"></diplr-file-upload>
+
+    <div *ngIf="uploading">
+      <md-progress-bar
+        class=""
+        [color]="'accent'"
+        [mode]="'determinate'"
+        [value]="uploadProgress"
+        [bufferValue]="bufferValue">
+      </md-progress-bar>
+    </div>
+  </div>
+  <div class="card-footer">
+    <div class="next">
+      <button md-raised-button class="btn btn-rose btn-round"
+              [disabled]="!fileHashed"
+              (click)="next.emit()">Next
+      </button>
+    </div>
+  </div>
+</diplr-card>

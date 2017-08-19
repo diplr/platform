@@ -1,0 +1,51 @@
+<diplr-card>
+  <div class="card-header">
+    Add the metadata you want to assign to the document
+  </div>
+  <div class="card-body">
+    <form novalidate [formGroup]="metaDataFormGroup" (submit)="formSubmit(metaDataFormGroup)">
+      <div class="card-form">
+        <div class="form-row">
+          <md-input-container color="primary">
+            <input type="text" mdInput placeholder="First Name" formControlName="firstName"/>
+            <md-error
+              *ngIf="metaDataFormGroup.get('firstName').hasError('required') && metaDataFormGroup.get('firstName').touched">
+              Firstname is required
+            </md-error>
+          </md-input-container>
+        </div>
+        <div class="form-row">
+          <md-input-container color="accent">
+            <input type="text" mdInput placeholder="Last Name" formControlName="lastName"/>
+            <md-error
+              *ngIf="metaDataFormGroup.get('lastName').hasError('required') && metaDataFormGroup.get('lastName').touched">
+              Lastname is required
+            </md-error>
+          </md-input-container>
+        </div>
+        <div class="form-row">
+          <md-input-container color="accent">
+            <input type="text" mdInput placeholder="Company" formControlName="company"/>
+            <md-error
+              *ngIf="metaDataFormGroup.get('company').hasError('required') && metaDataFormGroup.get('company').touched">
+              Company is required
+            </md-error>
+          </md-input-container>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="card-footer">
+    <div class="previous">
+      <button md-raised-button class="btn btn-rose btn-round"
+              (click)="previous.emit()">Previous
+      </button>
+    </div>
+    <div class="next">
+      <button md-raised-button class="btn btn-rose btn-round"
+              [disabled]="metaDataFormGroup.invalid"
+              (click)="next.emit()">Next
+      </button>
+    </div>
+  </div>
+</diplr-card>
