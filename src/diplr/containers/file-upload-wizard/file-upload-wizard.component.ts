@@ -27,4 +27,8 @@ export class FileUploadWizardComponent implements OnInit {
   previousClicked() {
     this.activeStep--;
   }
+
+  uploadToBlockChain() {
+    alert('Hier moet ge mij helpen Q ;) I give you them hash ' + this.base64Hash);
+  }
 }

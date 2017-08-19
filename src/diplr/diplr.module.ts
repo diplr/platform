@@ -14,6 +14,7 @@ import {FileUploadStep1Component} from './components/file-upload-step-1/file-upl
 import {CardComponent} from './components/card/card.component';
 import {FileUploadStep2Component} from './components/file-upload-step-2/file-upload-step-2.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {FileUploadStep3Component} from './components/file-upload-step-3/file-upload-step-3.component';
 
 const containers = [
   FileUploadWizardComponent
@@ -25,6 +26,7 @@ const components = [
   FileUploadIconComponent,
   FileUploadStep1Component,
   FileUploadStep2Component,
+  FileUploadStep3Component,
   CardComponent
 ];
 

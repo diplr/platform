@@ -39,6 +39,7 @@ export class FileUploadStep1Component implements OnInit {
           start = end;
           setTimeout(asyncUpdate);
         } else {
+          this.uploadProgress = 100;
           console.log(hash.hex());
           this.fileHashCreate.emit(this.hexToBase64(hash.hex()));
           this.fileHashed = true;
